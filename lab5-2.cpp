@@ -15,9 +15,9 @@ int main()
 	double totalPrice = 0.0;
 	cout<<"What is the price of your purchase?"<<endl;
 	cin>> purchasePrice;
-	cout<<"Are you a club member? (y/n)"<<endl;
+	cout<<"Are you a club member? (Y/N)"<<endl;
 	cin>>clubMember;
-	if (clubMember == 'y')
+	if (toupper(clubMember) == 'Y')
 		purchasePrice = purchasePrice - (purchasePrice * clubDiscount);
 	if (purchasePrice >= 100)
 		totalPrice = purchasePrice + shippingOver100;
